@@ -43,12 +43,15 @@ handleSignupOrLogin = () => {
     return(
       <div>
         <header className="header-footer">MEDLEY</header>
+        <div className="container">
+          <h1>MEDLEY</h1>
+          <h4>Flavors we bring to the table</h4>
+        </div>
         <Switch>
           <Route exact path='/' render={() =>
             <MainPage
               user={this.state.user}
               handleLogout={this.handleLogout}
-            
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 
