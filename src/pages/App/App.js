@@ -42,7 +42,7 @@ handleSignupOrLogin = () => {
   render()  {
     return(
       <div>
-        <header className="header-footer">MEDLEY</header>
+        {/* <header className="header-footer">MEDLEY</header> */}
         <div className="container">
           <h1>MEDLEY</h1>
           <h4>Flavors we bring to the table</h4>
