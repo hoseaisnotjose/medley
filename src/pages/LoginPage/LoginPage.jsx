@@ -11,7 +11,7 @@ class LoginPage extends Component {
     };
   
     handleChange = (e) => {
-      // Implement in an elegant way
+      // elegant way of imp
       this.setState({
         // Using Computed Property Names
         [e.target.name]: e.target.value
@@ -23,12 +23,11 @@ class LoginPage extends Component {
       try {
         await userService.login(this.state);
         this.props.handleSignupOrLogin();
-        // Successfully signed up - show GamePage
+        // Successfully signed up - show HomePage
         this.props.history.push('/');
       } catch (err) {
-        // Do not alert in your projects,
-        // show a modal or some UI instead
-        alert('Invalid login');
+        // alert below if invalid login
+        alert('Incorrect login');
       }
     }
   

@@ -1,10 +1,10 @@
 const express = require('express');
-const router = express.Roputer();
-const usersCtrl = require('../../controllers/user');
+const router = express.Router();
+const usersCtrl = require('../../controllers/users');
 
 // Public Routes
 router.post('/signup', usersCtrl.signup);
-// router.post('/login', userCtrl.login);
+router.post('/login', userCtrl.login);
 
 
 // Protected Routes
