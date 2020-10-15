@@ -33,15 +33,15 @@ handleSignupOrLogin = () => {
 
 /*--- Recipe CRUD ---*/
 
-// handleAddRecipe = async (newRecipesData) => {
-//   const newRecipe = await recipesApi.create(newRecipesData);
-//   this.setState((state) => ({
-//     recipes: [...state.recipes, newRecipe],
-//   }),
-//   // using cb to wait for state to update before rerouting
-//   () => this.props.history.push("/")
-//   );
-// };
+handleAddRecipe = async (newRecipeData) => {
+  const newRecipe = await recipe.create(newRecipeData);
+  this.setState((state) => ({
+    recipes: [...state.recipes, newRecipe],
+  }),
+  // using cb to wait for state to update before rerouting
+  () => this.props.history.push("/")
+  );
+};
 
 // updateRecipe
 
@@ -51,6 +51,10 @@ handleSignupOrLogin = () => {
 
 
 /*--- Lifecycle Methods ---*/
+async componentDidMount() {
+  const recipes = await recipeAPI.getAll();
+  this.setState({ recipes });
+}
 
 
   render()  {

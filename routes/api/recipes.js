@@ -12,7 +12,7 @@ function checkAuth(req, res, next) {
     return res.status(401).json({msg: 'Login First'});
 }
 
-/*--- GET /api/recipes*/ 
+/*--- GET /api/recipes ---*/ 
 router.get('/', recipesCtrl.index);
 router.post('/', recipesCtrl.create);
 router.get('/:id', recipesCtrl.show);

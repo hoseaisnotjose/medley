@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // if working with API (AJAX), routes go here (before "catch all" route)
 app.use('/api/users', require('./routes/api/users'));
 app.use(require('./config/auth'));
-// app.use('/api/receipes', require('./routes/api/scores'))
+// app.use('/api/recipes', require('./routes/api/recipes'));
 
 
 // catch all route
