@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 // exports attached to recipeAPI
-import * as recipeAPI from '../../utils/recipesService';
+import recipeAPI from '../../utils/recipesService';
 import AddRecipePage from '../../pages/AddRecipePage/AddRecipePage';
 // import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
 // import RecipeDetailPage from '../../pages/RecipeDetailPage/RecipeDetailPage';

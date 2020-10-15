@@ -1,4 +1,4 @@
-const cors = require('cors');
+// const cors = require('cors');
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -8,7 +8,7 @@ const app = express();
 
 // load the "secrets" from .env
 require('dotenv').config();
-require('./config/database');
+require('./config/database.js');
 
 app.use(logger('dev'));
 app.use(express.json());
