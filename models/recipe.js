@@ -8,6 +8,7 @@ const recipeSchema = new Schema({
     preptime: {type: String, default: none},
     ingredients: {type: CharacterData, default: none},
     quantity: {type: String, default: none},
+    instructions: {type: String, default: none},
     author: {type: Schema.Types.ObjectId, ref: 'user'},
     likes: [{type: Schema.Types.ObjectId, ref: 'user'}],
     comments: [{type: Schema.Types.ObjectId, ref: 'user'}],
