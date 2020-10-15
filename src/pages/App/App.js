@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 // exports attached to recipeAPI
-import * as recipeAPI from '../../utils/recipesService';
+// import * as recipeAPI from '../../utils/recipesService';
 import AddRecipePage from '../../pages/AddRecipePage/AddRecipePage';
 // import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
 // import RecipeDetailPage from '../../pages/RecipeDetailPage/RecipeDetailPage';
@@ -33,15 +33,15 @@ handleSignupOrLogin = () => {
 
 /*--- Recipe CRUD ---*/
 
-handleAddRecipe = async (newRecipeData) => {
-  const newRecipe = await recipe.create(newRecipeData);
-  this.setState((state) => ({
-    recipes: [...state.recipes, newRecipe],
-  }),
-  // using cb to wait for state to update before rerouting
-  () => this.props.history.push("/")
-  );
-};
+// handleAddRecipe = async (newRecipeData) => {
+//   const newRecipe = await recipe.create(newRecipeData);
+//   this.setState((state) => ({
+//     recipes: [...state.recipes, newRecipe],
+//   }),
+//   // using cb to wait for state to update before rerouting
+//   () => this.props.history.push("/")
+//   );
+// };
 
 // updateRecipe
 
@@ -51,10 +51,10 @@ handleAddRecipe = async (newRecipeData) => {
 
 
 /*--- Lifecycle Methods ---*/
-async componentDidMount() {
-  const recipes = await recipeAPI.getAll();
-  this.setState({ recipes });
-}
+// async componentDidMount() {
+//   const recipes = await recipeAPI.getAll();
+//   this.setState({ recipes });
+// }
 
 
   render()  {
