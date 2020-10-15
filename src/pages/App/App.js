@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 // exports attached to recipeAPI
-// import * as recipeAPI from '../../utils/recipesService';
+import * as recipeAPI from '../../utils/recipesService';
 import AddRecipePage from '../../pages/AddRecipePage/AddRecipePage';
 // import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
 // import RecipeDetailPage from '../../pages/RecipeDetailPage/RecipeDetailPage';
@@ -32,7 +32,7 @@ handleSignupOrLogin = () => {
 }
 
 /*--- Recipe CRUD ---*/
-
+// CREATE RECIPE
 // handleAddRecipe = async (newRecipeData) => {
 //   const newRecipe = await recipe.create(newRecipeData);
 //   this.setState((state) => ({
@@ -43,7 +43,7 @@ handleSignupOrLogin = () => {
 //   );
 // };
 
-// updateRecipe
+// UPDATE RECIPE
 
 // readRecipe
 
@@ -51,10 +51,10 @@ handleSignupOrLogin = () => {
 
 
 /*--- Lifecycle Methods ---*/
-// async componentDidMount() {
-//   const recipes = await recipeAPI.getAll();
-//   this.setState({ recipes });
-// }
+async componentDidMount() {
+  const recipes = await recipeAPI.getAll();
+  this.setState({ recipes });
+}
 
 
   render()  {
@@ -74,6 +74,9 @@ handleSignupOrLogin = () => {
                   handleLogout={this.handleLogout}
                 />
               }/>
+              <Route exact path="/add" render={() => (
+                <AddRecipePage handleAddRecipe={this.handleAddRecipe}/>
+              )}/>
               <Route exact path='/signup' render={({ history }) => 
               <SignupPage
                 history={history}

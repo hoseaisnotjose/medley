@@ -2,12 +2,17 @@ import tokenService from './tokenService';
 const BASE_URL = '/api/recipes';
 
 export default {
+    getAll,
     index,
     create,
     show,
     update,
-    deleteOne
+    deleteOne,
 };
+
+function getAll() {
+    return fetch(BASE_URL).then(res => res.json());
+}
 
 function index() {
     return fetch(BASE_URL).then(res => res.json());
