@@ -1,5 +1,5 @@
 const recipe = require('../../models/recipe');
-const { deleteOne } = require('../models/user');
+// const { deleteOne } = require('../models/user');
 
 module.exports = {
     index,
