@@ -17,7 +17,7 @@ function create(recipe) {
             'Content-type': 'application/json',
             'Authorization': 'Bearer ' + tokenService.getToken()
         },
-        body: JSON.stringify(score)
+        body: JSON.stringify(recipe)
     };
     return fetch(BASE_URL, options).then(res => res.json());
 }

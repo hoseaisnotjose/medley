@@ -26,9 +26,13 @@ userSchema.pre('save', function(next) {
     );
 });
 
-userSchema.methods.comparePassword = function(tryPassword) {
+userSchema.methods.comparePassword = function(tryPassword, cb) {
     // 'this' = user doc
-    bcrypt.compare(tryPassword, this.password, cb);
+    bcrypt.compare(tryPassword, this.password,
+        function(err, isMatch) {
+            if (err) return cb(err);
+            cb(null, isMatch);
+        });
 };
 
 
