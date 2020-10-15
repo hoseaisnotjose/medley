@@ -42,30 +42,32 @@ handleSignupOrLogin = () => {
   render()  {
     return(
       <div>
+        <Route>
         {/* <header className="header-footer">MEDLEY</header> */}
         <div className="container">
           <h1>MEDLEY</h1>
           <h4>Flavors we bring to the table</h4>
         </div>
+        </Route>
         <Switch>
-          <Route exact path='/' render={() =>
-            <MainPage
-              user={this.state.user}
-              handleLogout={this.handleLogout}
+              <Route exact path='/' render={() =>
+                <MainPage
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                />
+              }/>
+              <Route exact path='/signup' render={({ history }) => 
+              <SignupPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            }/>
+            <Route exact path='/login' render={({ history }) =>
+            <LoginPage
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              history={history}
             />
           }/>
-          <Route exact path='/signup' render={({ history }) => 
-          <SignupPage
-            history={history}
-            handleSignupOrLogin={this.handleSignupOrLogin}
-          />
-        }/>
-        <Route exact path='/login' render={({ history }) =>
-        <LoginPage
-          handleSignupOrLogin={this.handleSignupOrLogin}
-          history={history}
-        />
-      }/>
         </Switch>
       </div>
     )

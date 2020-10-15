@@ -13,7 +13,6 @@ const MainPage = (props) => {
                 user={props.user}
                 handleLogout={props.handleLogout}
             />
-
         </div>
     );
 };
