@@ -1,9 +1,12 @@
 import tokenService from './tokenService';
-const BASE_URL = '/api/recipes/';
+const BASE_URL = '/api/recipe/';
 
 export default {
     index,
-    create
+    create,
+    // show,
+    // update,
+    // delete
 };
 
 function index() {

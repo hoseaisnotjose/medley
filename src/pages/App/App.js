@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Link, NavLink, Switch } from 'react-router-dom';
+// exports attached to recipeAPI
+import * as recipeAPI from '../../utils/recipesService';
+import AddRecipePage from '../../pages/AddRecipePage/AddRecipePage';
+// import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
+// import RecipeDetailPage from '../../pages/RecipeDetailPage/RecipeDetailPage';
+// import RecipeListPage from '../../pages/RecipeListPage/RecipeListPage';
 import MainPage from '../../pages/MainPage/MainPage'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -27,7 +33,15 @@ handleSignupOrLogin = () => {
 
 /*--- Recipe CRUD ---*/
 
-// addRecipe
+// handleAddRecipe = async (newRecipesData) => {
+//   const newRecipe = await recipesApi.create(newRecipesData);
+//   this.setState((state) => ({
+//     recipes: [...state.recipes, newRecipe],
+//   }),
+//   // using cb to wait for state to update before rerouting
+//   () => this.props.history.push("/")
+//   );
+// };
 
 // updateRecipe
 
