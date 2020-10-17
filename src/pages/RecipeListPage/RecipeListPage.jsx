@@ -9,7 +9,7 @@ function RecipeListPage(props) {
                 <></>
             ) : (
                 <>
-                <h1>Yummy Recipes</h1>
+                <h1>Recipes List</h1>
                 <div className="RecipeListPage-grid">
                     {props.recipes.map(recipe =>
                     <RecipeListItem

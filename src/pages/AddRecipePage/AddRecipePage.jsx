@@ -91,7 +91,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <button type="submit" className="btn" disabled={this.state.invalidForm}>Add Recipe</button>
-                    <button type="canel" className="btn">CANCEL</button>
+                    {/* <button type="canel" className="btn">CANCEL</button> */}
                 </form>
             </>
         );

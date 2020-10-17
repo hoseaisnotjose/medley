@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './RecipeListItem.css';
 
-function RecipeListItem({}) {
+function RecipeListItem({recipe, handleDeleteRecipe}) {
     return(
         <div className="panel panel-default">
             <div className="panel-heading">
@@ -11,7 +11,7 @@ function RecipeListItem({}) {
             <div className="panel-footer RecipeListItem-action-panel">
                 <Link className="btn btn-xs btn-info" to=
                 {{
-                    pathname: "/details",
+                    pathname: "/show",
                     state: {recipe}
                 }}>Details</Link>
 

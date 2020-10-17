@@ -4,6 +4,7 @@ import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
 import './MainPage.css';
 import { PromiseProvider } from 'mongoose';
+import RecipeListPage from '../RecipeListPage/RecipeListPage';
 
 
 const MainPage = (props) => {
@@ -12,6 +13,9 @@ const MainPage = (props) => {
             <NavBar
                 user={props.user}
                 handleLogout={props.handleLogout}
+            />
+            <RecipeListPage
+                recipe={props.recipe}
             />
         </div>
     );

@@ -42,6 +42,7 @@ function show(recipes) {
 }
 
 function update(recipes) {
+    console.log(recipes)
     const options = {
         method: 'PUT',
         headers: {
@@ -50,7 +51,7 @@ function update(recipes) {
         },
         body: JSON.stringify(recipes)
     };
-    return fetch(BASE_URL, options).then(res => res.json());
+    return fetch(`${BASE_URL}/${recipes._id}`).then(res => res.json());
 }
 function deleteOne(id) {
     const options = {
@@ -61,5 +62,5 @@ function deleteOne(id) {
         },
         body: JSON.stringify(id)
     };
-    return fetch(BASE_URL, options).then(res => res.json());
+    return fetch(`${BASE_URL}/${id}`).then(res => res.json());
 }

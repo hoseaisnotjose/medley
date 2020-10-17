@@ -3,15 +3,15 @@ const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema({
     name: {type: String, required: true},
-    description: {type: String, default: none},
+    description: {type: String},
     servings: {type: String, default: 'Two'},
-    preptime: {type: String, default: none},
-    ingredients: {type: CharacterData, default: none},
-    quantity: {type: String, default: none},
-    instructions: {type: String, default: none},
-    author: {type: Schema.Types.ObjectId, ref: 'user'},
-    likes: [{type: Schema.Types.ObjectId, ref: 'user'}],
-    comments: [{type: Schema.Types.ObjectId, ref: 'user'}],
+    preptime: {type: String},
+    ingredients: {type: String},
+    quantity: {type: String},
+    instructions: {type: String},
+    // author: {type: Schema.Types.ObjectId, ref: 'user'},
+    // likes: [{type: Schema.Types.ObjectId, ref: 'user'}],
+    // comments: [{type: Schema.Types.ObjectId, ref: 'user'}],
 },{
     timestamps: true
 });

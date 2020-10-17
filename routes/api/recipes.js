@@ -3,8 +3,8 @@ const router = express.Router();
 const recipesCtrl = require('../../controllers/recipes');
 
 /*--- Protected Routes ---*/ 
-router.get('/', userCtrl);
-router.post('/', checkAuth, userCtrl.create);
+// router.get('/', userCtrl);
+// router.post('/', checkAuth, userCtrl.create);
 
 /*--- Helper Functions ---*/ 
 function checkAuth(req, res, next) {
