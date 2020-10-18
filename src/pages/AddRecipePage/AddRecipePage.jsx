@@ -34,6 +34,7 @@ class AddRecipePage extends Component {
             <>
                 <h1>Add Recipe</h1>
                 <form ref={this.formRef} autoComplete="on" onSubmit={this.handleSubmit}>
+
                     <div className="form-group">
                         <label>Name</label>
                         <input className="form-control" name="name" 
