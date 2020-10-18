@@ -85,7 +85,7 @@ class App extends Component {
           </Link>
           </header>
           <Switch>
-                <Route exact path='/' render={() =>
+                <Route exact path="/" render={() =>
                   <MainPage
                   user={this.state.user}
                   handleLogout={this.handleLogout}

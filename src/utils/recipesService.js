@@ -19,15 +19,11 @@ function index() {
 }
 
 function create(recipes) {
-    const options = {
+    return fetch(BASE_URL, {
         method: 'POST',
-        headers: {
-            'Content-type': 'application/json',
-            'Authorization': 'Bearer ' + tokenService.getToken()
-        },
+        headers: {'content-type': 'application/json'},
         body: JSON.stringify(recipes)
-    };
-    return fetch(BASE_URL, options).then(res => res.json());
+    }).then(res => res.json());
 }
 function show(recipes) {
     const options = {
@@ -42,16 +38,11 @@ function show(recipes) {
 }
 
 function update(recipes) {
-    console.log(recipes)
-    const options = {
+    return fetch(`${BASE_URL}/${recipes._id}`, {
         method: 'PUT',
-        headers: {
-            'Content-type': 'application/json',
-            'Authorization': 'Bearer ' + tokenService.getToken()
-        },
+        headers: {'content-type': 'application/json'},
         body: JSON.stringify(recipes)
-    };
-    return fetch(`${BASE_URL}/${recipes._id}`).then(res => res.json());
+    }).then(res => res.json());
 }
 function deleteOne(id) {
     const options = {

@@ -11,6 +11,7 @@ class AddRecipePage extends Component {
             preptime: '',
             ingredients: '',
             quantity: '',
+            instructions: '',
         }
     };
 
@@ -90,6 +91,16 @@ class AddRecipePage extends Component {
                         required
                         />
                     </div>
+                    <div className="form-group">
+                        <label>Instructions (required)</label>
+                        <input 
+                        className="form-control"
+                        name="instructions"
+                        value={this.state.formData.instructions}
+                        onChange={this.handleChange}
+                        required
+                        />
+                        </div>
                     <button type="submit" className="btn" disabled={this.state.invalidForm}>Add Recipe</button>
                     {/* <button type="canel" className="btn">CANCEL</button> */}
                 </form>
