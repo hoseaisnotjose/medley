@@ -17,18 +17,12 @@ function RecipePanel({recipe}) {
                     <dd>{recipe.preptime}</dd>
                     <dt>Ingredients</dt>
                     <dd>{recipe.ingredients}</dd>
-                    <dt>Quantity</dt>
-                    <dd>{recipe.quantity}</dd>
                     <dt>Instructions</dt>
                     <dd>{recipe.instructions}</dd>
-                    {/* <dt>By:</dt>
-                    <dd>
-                        <Link to='/'>{recipe.author}</Link>
-                    </dd> */}
                 </dl>
             </div>
             <div className="panel-footer">
-                    <Link to='/'>Return Home</Link>
+                    <Link to='/home'>Return Home</Link>
             </div>
         </div>
     );

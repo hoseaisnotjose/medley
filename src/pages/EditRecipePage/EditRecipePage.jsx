@@ -30,7 +30,7 @@ class EditRecipePage extends Component {
                 <h1>Edit Recipe</h1>
                 <form ref={this.formRef} autoComplete="on" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Recipe Name (required)</label>
+                        <label>Name</label>
                         <input 
                         className="form-control"
                         name="name"
@@ -40,7 +40,7 @@ class EditRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Description</label>
+                        <label>Description</label>
                         <input 
                         className="form-control"
                         name="description"
@@ -49,7 +49,7 @@ class EditRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Servings (required)</label>
+                        <label>Servings</label>
                         <input 
                         className="form-control"
                         name="servings"
@@ -59,7 +59,7 @@ class EditRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Prep Time</label>
+                        <label>Prep Time</label>
                         <input 
                         className="form-control"
                         name="preptime"
@@ -68,7 +68,7 @@ class EditRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Ingredients (required)</label>
+                        <label>Ingredients (required)</label>
                         <input 
                         className="form-control"
                         name="ingredients"
@@ -78,17 +78,17 @@ class EditRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Quantity (required)</label>
+                        <label>Instructions</label>
                         <input 
                         className="form-control"
-                        name="quantity"
-                        value={this.state.formData.quantity}
+                        name="instructions"
+                        value={this.state.formData.instructions}
                         onChange={this.handleChange}
                         required
                         />
                     </div>
                     <button type="submit" className="btn btn-xs" disabled={this.state.invalidForm}>SAVE</button>
-                    <Link to='/'>CANCEL</Link>
+                    <Link to='/home'>CANCEL</Link>
                 </form>
             </>
         );

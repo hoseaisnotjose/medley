@@ -10,7 +10,6 @@ class AddRecipePage extends Component {
             servings: 'Two',
             preptime: '',
             ingredients: '',
-            quantity: '',
             instructions: '',
         }
     };
@@ -36,7 +35,7 @@ class AddRecipePage extends Component {
                 <h1>Add Recipe</h1>
                 <form ref={this.formRef} autoComplete="on" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Recipe Name (required)</label>
+                        <label>Name</label>
                         <input className="form-control" name="name" 
                         value={this.state.formData.name}
                         onChange={this.handleChange}
@@ -44,7 +43,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Description</label>
+                        <label>Description</label>
                         <input 
                         className="form-control"
                         name="description"
@@ -53,7 +52,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Servings (required)</label>
+                        <label>Servings</label>
                         <input 
                         className="form-control"
                         name="servings"
@@ -63,7 +62,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Prep Time</label>
+                        <label>Prep Time</label>
                         <input 
                         className="form-control"
                         name="preptime"
@@ -72,7 +71,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Ingredients (required)</label>
+                        <label>Ingredients</label>
                         <input 
                         className="form-control"
                         name="ingredients"
@@ -82,17 +81,7 @@ class AddRecipePage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Recipe Quantity (required)</label>
-                        <input 
-                        className="form-control"
-                        name="quantity"
-                        value={this.state.formData.quantity}
-                        onChange={this.handleChange}
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Instructions (required)</label>
+                        <label>Instructions</label>
                         <input 
                         className="form-control"
                         name="instructions"

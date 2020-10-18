@@ -7,11 +7,9 @@ const recipeSchema = new Schema({
     servings: {type: String, default: 'Two'},
     preptime: {type: String},
     ingredients: {type: String},
-    quantity: {type: String},
     instructions: {type: String},
-    // author: {type: Schema.Types.ObjectId, ref: 'user'},
-    // likes: [{type: Schema.Types.ObjectId, ref: 'user'}],
-    // comments: [{type: Schema.Types.ObjectId, ref: 'user'}],
+    owner: {type: Number, default: 0},
+    likes: [{type: Schema.Types.ObjectId, ref: 'user'}]
 },{
     timestamps: true
 });
