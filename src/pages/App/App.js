@@ -78,7 +78,12 @@ class App extends Component {
   render()  {
     return(
       <div className="App">
-        <header className='header-footer'>MEDLEY</header>
+        <header className='header-footer'>
+          <Link link to="/">
+              MEDLEY
+          <h6 className="subheader">Flavors we bring to the table</h6> 
+          </Link>
+          </header>
           <Switch>
                 <Route exact path='/' render={() =>
                   <MainPage

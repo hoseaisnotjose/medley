@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RecipeListPage from '../../pages/RecipeListPage/RecipeListPage';
+// import logo from '../../src/logo.svg';
 import './NavBar.css';
 
 const NavBar = (props) => {
