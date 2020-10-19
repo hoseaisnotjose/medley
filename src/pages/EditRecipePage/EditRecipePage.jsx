@@ -87,6 +87,15 @@ class EditRecipePage extends Component {
                         required
                         />
                     </div>
+                    <div className="form-group">
+                        <label>Image</label>
+                        <input 
+                        className="form-control"
+                        name="photo"
+                        value={this.state.formData.photo}
+                        onChange={this.handleChange}
+                        />
+                    </div>
                     <button type="submit" className="btn btn-xs" disabled={this.state.invalidForm}>SAVE</button>
                     <Link to='/home'>CANCEL</Link>
                 </form>
