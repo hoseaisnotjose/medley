@@ -64,7 +64,7 @@ class App extends Component {
       this.setState((state) => ({
         recipes: state.recipes.filter((r) => r._id !== id),
       }),
-      () => this.props.history.push("/")
+      () => this.props.history.push("/home")
     );
   };
 

@@ -45,13 +45,12 @@ function update(recipes) {
     }).then(res => res.json());
 }
 function deleteOne(id) {
+    console.log(id)
     const options = {
         method: 'DELETE',
         headers: {
-            'Content-type': 'application/json',
             'Authorization': 'Bearer ' + tokenService.getToken()
         },
-        body: JSON.stringify(id)
     };
-    return fetch(`${BASE_URL}/${id}`).then(res => res.json());
+    return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
 }

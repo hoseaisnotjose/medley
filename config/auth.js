@@ -8,7 +8,7 @@ module.exports = function(req, res, next) {
     let token = req.get('Authorization') || req.query.token
     if (token) {
         token = token.replace('Bearer ', '');
-        jwt.verify(token, SECRET, function() {
+        jwt.verify(token, SECRET, function(err, decoded) {
             if(err) {
                 return next(err);
             } else {

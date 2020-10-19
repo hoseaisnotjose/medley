@@ -37,6 +37,7 @@ async function update(req, res) {
 }
 
 async function deleteOne (req, res) {
+    console.log('hitting here')
     const deletedRecipe = await Recipe.findByIdAndRemove(req.params.id);
     res.status(200).json(deletedRecipe);
 }
