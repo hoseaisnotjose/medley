@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormLabel } from 'react-bootstrap';
 
 
 class AddRecipePage extends Component {
@@ -35,23 +36,23 @@ class AddRecipePage extends Component {
     render() {
         return(
             <>
-                <h1>Add Recipe</h1>
+                <h3>Add Recipe</h3>
                 <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
             {/* <Modal dialogClassName="adModal" show={this.state.showModal}>
                 <Modal.body>
                     <divclassName="modalBody"> */}
                     <div className="form-group">
                         <label>Name</label>
-                        <input className="form-control" name="name" 
+                        <input className="form-control-lg" name="name" 
                         value={this.state.formData.name}
                         onChange={this.handleChange}
                         required
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="form-label">
                         <label>Description</label>
-                        <input 
-                        className="form-control"
+                        <textarea 
+                        className="form-control-lg"
                         name="description"
                         value={this.state.formData.description}
                         onChange={this.handleChange}
@@ -60,7 +61,7 @@ class AddRecipePage extends Component {
                     <div className="form-group">
                         <label>Servings</label>
                         <input 
-                        className="form-control"
+                        className="form-control-lg"
                         name="servings"
                         value={this.state.formData.servings}
                         onChange={this.handleChange}
@@ -70,7 +71,7 @@ class AddRecipePage extends Component {
                     <div className="form-group">
                         <label>Prep Time</label>
                         <input 
-                        className="form-control"
+                        className="form-control-lg"
                         name="preptime"
                         value={this.state.formData.preptime}
                         onChange={this.handleChange}
@@ -78,8 +79,8 @@ class AddRecipePage extends Component {
                     </div>
                     <div className="form-group">
                         <label>Ingredients</label>
-                        <input 
-                        className="form-control"
+                        <textarea
+                        className="form-control-lg"
                         name="ingredients"
                         value={this.state.formData.ingredients}
                         onChange={this.handleChange}
@@ -88,8 +89,8 @@ class AddRecipePage extends Component {
                     </div>
                     <div className="form-group">
                         <label>Instructions</label>
-                        <input 
-                        className="form-control"
+                        <textarea 
+                        className="form-control-lg"
                         name="instructions"
                         value={this.state.formData.instructions}
                         onChange={this.handleChange}
@@ -99,7 +100,7 @@ class AddRecipePage extends Component {
                     <div className="form-group">
                         <label>Image</label>
                         <input 
-                        className="form-control"
+                        className="form-control-lg"
                         name="photo"
                         value={this.state.formData.photo}
                         onChange={this.handleChange}
