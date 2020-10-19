@@ -8,7 +8,8 @@ const recipeSchema = new Schema({
     preptime: {type: String},
     ingredients: {type: String},
     instructions: {type: String},
-    owner: {type: Number, default: 0},
+    photo: {type: String},
+    // user: {this.props.user._id},
     likes: [{type: Schema.Types.ObjectId, ref: 'user'}]
 },{
     timestamps: true

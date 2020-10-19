@@ -10,7 +10,8 @@ const userSchema = new mongoose.Schema({
         lowercase: true, 
         unique: true
     },
-    password: String
+    password: String,
+    isAdmin: Boolean
 }, {
     timestamps: true
 });

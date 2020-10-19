@@ -19,6 +19,7 @@ function RecipePanel({recipe}) {
                     <dd>{recipe.ingredients}</dd>
                     <dt>Instructions</dt>
                     <dd>{recipe.instructions}</dd>
+                    {recipe.photo && <img alt="recipe"src={recipe.photo}/>}
                 </dl>
             </div>
             <div className="panel-footer">

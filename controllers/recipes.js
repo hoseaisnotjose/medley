@@ -6,8 +6,15 @@ module.exports = {
     create,
     show,
     update,
-    delete: deleteOne
+    delete: deleteOne,
+    userRecipes
 };
+
+async function userRecipes(req, res) {
+    console.log('text', req.params.id);
+    const recipes = await Recipe.find({ 'user': req.params.id})
+    res.status(200).json(recipes);
+}
 
 async function index(req, res) {
     const recipes = await Recipe.find({});

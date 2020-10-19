@@ -12,14 +12,14 @@ import MainPage from '../../pages/MainPage/MainPage'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
-// import {
-//   Button,
-//   Modal,
+import {
+  Button,
+  Modal,
 //   FormGroup,
 //   FormControl,
 //   ControlLabel,
 //   Glyphicon
-// } from 'react-bootstrap';
+} from 'react-bootstrap';
 
 class App extends Component {
   state = {

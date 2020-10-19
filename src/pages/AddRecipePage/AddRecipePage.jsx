@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 class AddRecipePage extends Component {
     state = {
+        showModal: false,
         invalidForm: true,
         formData: {
             name: '',
@@ -11,6 +12,8 @@ class AddRecipePage extends Component {
             preptime: '',
             ingredients: '',
             instructions: '',
+            photo: '',
+            // user: this.props.user._id
         }
     };
 
@@ -33,8 +36,10 @@ class AddRecipePage extends Component {
         return(
             <>
                 <h1>Add Recipe</h1>
-                <form ref={this.formRef} autoComplete="on" onSubmit={this.handleSubmit}>
-
+                <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+            {/* <Modal dialogClassName="adModal" show={this.state.showModal}>
+                <Modal.body>
+                    <divclassName="modalBody"> */}
                     <div className="form-group">
                         <label>Name</label>
                         <input className="form-control" name="name" 
@@ -90,10 +95,22 @@ class AddRecipePage extends Component {
                         onChange={this.handleChange}
                         required
                         />
-                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label>Image</label>
+                        <input 
+                        className="form-control"
+                        name="photo"
+                        value={this.state.formData.photo}
+                        onChange={this.handleChange}
+                        />
+                    </div>
                     <button type="submit" className="btn" disabled={this.state.invalidForm}>Add Recipe</button>
                     {/* <button type="canel" className="btn">CANCEL</button> */}
                 </form>
+                {/* </Modal.body>
+                </Modal>
+                </div> */}
             </>
         );
     }

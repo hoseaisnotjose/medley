@@ -18,5 +18,6 @@ router.post('/', recipesCtrl.create);
 router.get('/:id', recipesCtrl.show);
 router.put('/:id', recipesCtrl.update);
 router.delete('/:id', recipesCtrl.delete);
+router.get('/users/:id', recipesCtrl.userRecipes);
 
 module.exports = router;
