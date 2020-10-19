@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MEDLEY
+### Flavors we bring to the table!
 
-## Available Scripts
+MEDLEY is a recipe app that is shared among our family. With recipes dating back late 1800's and nealry 20 of us and from nearly all continents, we feel fortunate to experience cuisine from different parts of the world whlie gathered for holidays and on family vacations.
 
-In the project directory, you can run:
+## MEDLEY's features include:
 
-### `npm start`
+-	User's ability to signup/login
+-	User's ability to CRUD entries of thier own
+-	User's ability to add photos to their recipe
+-	Ability to view recipes from other family members
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### **[MEDLEY](https://medley-b.herokuapp.com/)**
 
-### `npm test`
+#### **[Trello](https://trello.com/b/zNdMcWKs/medley-fam-recipe)**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **[ERD](https://lucid.app/lucidchart/fcfe694a-502b-446d-b510-ffe1f58dda6f/edit?page=0_0#?folder_id=home&browser=icon)**
 
-### `npm run build`
+#### **[Wireframe](https://www.figma.com/file/TKQW8P6pLGJM3RsMCO4Hy0/MEDLEY?node-id=0%3A1)**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Screenshots:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Main Page:
+- ##### Login | Signup
 
-### `npm run eject`
+<img src="https://i.imgur.com/zxMl77h.png" width="300">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Home Page:
+- ##### Home/Recipe List
+- ##### Add Recipe
+- ##### Logout
+- ##### User Profile (incomplete)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://i.imgur.com/uvWNh8V.jpg" width="300">
+<img src="https://i.imgur.com/RMSzTgP.jpg" width="300">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Add Recipe:
+<img src="https://i.imgur.com/LsqlLeC.png" width="300">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Edit Recipe:
+<img src="https://i.imgur.com/bEVbXYq.png" width="300">
 
-## Learn More
+### Technologies Used:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-	MERN
+-	Bootstrap
+-	JavaScript
+-	HTML
+-	CSS
+-	Atlas
+-   JWT
+-   Postman
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Icebox:
 
-### Code Splitting
+- Like Button
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Ability to share recipes via email
 
-### Analyzing the Bundle Size
+- User photo, and a better photo upload capability
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Pin recipes
 
-### Making a Progressive Web App
+- Search functionality
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- User profile/ability for user to click on their name and find list of recipe they had published

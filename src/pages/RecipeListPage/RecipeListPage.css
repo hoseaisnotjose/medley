@@ -1,7 +1,9 @@
 .RecipeListPage-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 20px;
         /* background: url('https://www.azutura.com/media/catalog/product/cache/47/image/650x/040ec09b1e35df139433887a97daa66f/W/S/WS-45032_WP.jpg'); */
         padding: 10px;
