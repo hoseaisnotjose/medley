@@ -12,26 +12,29 @@ import MainPage from '../../pages/MainPage/MainPage'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
-import {
-  Button,
-  Modal,
-//   FormGroup,
-//   FormControl,
-//   ControlLabel,
-//   Glyphicon
-} from 'react-bootstrap';
+// import {
+//   Button,
+//   Modal,
+// } from 'react-bootstrap';
 
 class App extends Component {
-  state = {
-    recipes: [],
+  constructor () {
+    super();
+  this.state = {
     user: userService.getUser(),
+    recipes: [],
   };
+}
+
+  async componentDidMount() {
+    const recipes = await recipeAPI.getAllRecipes();
+    this.setState({ recipes });
+  }
 
   /*--- Recipe CRUD ---*/
 
   // CREATE RECIPE
   handleAddRecipe = async (newRecipeData) => {
-    console.log(newRecipeData)
       const newRecipe = await recipeAPI.create(newRecipeData);
       this.setState((state) => ({
         recipes: [...state.recipes, newRecipe],
@@ -89,8 +92,8 @@ class App extends Component {
         <header className='header-footer'>
           <Link link to="/">
               MEDLEY
-          <h6 className="subheader">Flavors we bring to the table</h6> 
           </Link>
+          <h6 className="subheader">Flavors we bring to the table</h6>
           </header>
           <Switch>
                 <Route exact path="/" render={() =>
